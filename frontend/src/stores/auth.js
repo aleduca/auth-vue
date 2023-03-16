@@ -1,6 +1,7 @@
 import { computed, ref } from 'vue';
 import { defineStore } from 'pinia';
 import http from '@/services/http.js';
+import router from '../router';
 
 export const useAuth = defineStore('auth', () => {
 
@@ -43,8 +44,9 @@ export const useAuth = defineStore('auth', () => {
       });
       return data;
     } catch (error) {
-      isAuth.value = false;
-      console.log(error.response.data);
+      clear();
+      router.push('/login');
+      console.log('error',error.response.data);
     }
   }
 

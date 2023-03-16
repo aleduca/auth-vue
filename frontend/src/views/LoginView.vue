@@ -1,7 +1,7 @@
 <template>
   <h2>Login</h2>
 
-  <template v-if="!auth.isAuthenticated">
+  <template v-if="!auth.isAuth">
     <form @submit.prevent="login">
       <input
         v-model="user.email"

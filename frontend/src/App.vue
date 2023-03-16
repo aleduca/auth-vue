@@ -16,7 +16,7 @@
       </router-link>
     </li>
     <li>
-      <template v-if="auth.isAuthenticated">
+      <template v-if="auth.isAuth">
         Olá {{ auth.fullName }} 
         <button @click="logout">
           Logout

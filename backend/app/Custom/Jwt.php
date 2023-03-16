@@ -26,7 +26,7 @@ class Jwt
     $key = $_ENV['JWT_KEY'];
 
     $payload = [
-      'exp' => time() + 1800,
+      'exp' => time() + 1,
       'iat' => time(),
       'data' => $data
     ];
