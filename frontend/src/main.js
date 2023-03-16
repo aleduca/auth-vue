@@ -22,7 +22,7 @@ if (localStorage.getItem('token')) {
       auth.setIsAuth(true);
        await auth.checkToken();
     } catch (error) {
-      auth.setIsAuth(false);
+      auth.clear()
     }
   })()
 }
